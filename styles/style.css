@@ -26,7 +26,8 @@ body {
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
     --gutter: 30px;
     --footer-height: 25px;
-    
+    display: grid;
+    grid-template-columns: 200px 1fr;
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
 }
@@ -36,31 +37,45 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
     margin-bottom: calc(var(--footer-height));
 }
 
 section {
-    background-color: var(--color5);
+    background-color: white;
+    height: 100%;
     max-width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: var(--gutter);
     padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
 }
 
 header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: flex-start;
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
+    height: 100%;
+    width: 200px;
+    top: 0;
+    background-color: red;
+}
+a {
+    text-decoration: none;
+    color: black;
 }
 
+header a {
+    font-weight: 900;
+    color: black;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
 
 h2 {
     font-size: 1.8rem;
@@ -69,6 +84,9 @@ h2 {
 
 .gutter-right {
     margin-right: 20px;
+}
+p {
+    margin: 0px;
 }
 
 header img {
@@ -79,13 +97,38 @@ p {
     margin: var(--gutter);
 }
   
-footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    height: var(--footer-height);
+#hero-list-container {
     display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    box-shadow: var(--shadow);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 50px;
+
 }
+
+.hero-card {
+    font-size: 1rem;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: solid 5px black;
+    width: 200px;
+    height: 200px;
+}
+
+.hero-card img {
+    width: 60%;
+    
+    border-radius: 20px;
+}
+.hero-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+}
+
